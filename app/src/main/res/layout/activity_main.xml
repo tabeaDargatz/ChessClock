@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkGray"
+    android:orientation="vertical"
+    android:exported="true"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn_player1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="p1PressedBtn"
+            android:rotation="180"
+            android:layout_margin="15dp"
+            android:textSize="60sp"
+            app:backgroundTint="@color/gray" />
+
+        <TextView
+            android:id="@+id/moveCounterP1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="25dp"
+            android:elevation="10dp"
+            android:textSize="20dp"
+            android:text="Move: 0"
+            android:rotation="180"
+             />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_middleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_settings"
+            android:layout_width="0px"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            app:backgroundTint="@color/gray"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/settings"
+            android:background="@null"
+            android:contentDescription="Settings"
+            tools:ignore="NestedWeights"
+            android:onClick="openSettings"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_pause"
+            android:layout_width="0px"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            app:backgroundTint="@color/gray"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/pause"
+            android:background="@null"
+            android:contentDescription="Pause / Unpause"
+            android:onClick="pause"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_reset"
+            android:layout_width="0px"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            app:backgroundTint="@color/gray"
+            app:srcCompat="@drawable/reload"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:contentDescription="Resetting"
+            android:onClick="reset"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn_player2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="p2PressedBtn"
+            android:textSize="60sp"
+            app:backgroundTint="@color/gray" />
+
+        <TextView
+            android:id="@+id/moveCounterP2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:layout_alignBottom="@id/btn_player2"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:text="Move: 0" />
+
+    </RelativeLayout>
+
+</LinearLayout>

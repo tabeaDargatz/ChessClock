@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tabeas Chess Clock</string>
+    <string name="player1Time">Time</string>
+    <string name="player2Time">Time</string>
+</resources>
